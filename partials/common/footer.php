@@ -5,7 +5,7 @@
 				$('#navigasyon li.active').removeClass("active");
 				var activePage = "<?php echo $activePage; ?>";
 				if (activePage){
-					$('#navigasyon li#'+activePage).addClass('active');	
+					//$('#navigasyon li#'+activePage).addClass('active');	
 				}
 			});
 		</script>

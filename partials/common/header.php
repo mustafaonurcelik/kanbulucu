@@ -1,7 +1,7 @@
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-	Taner Alakuş Atölyesi
+	KanBulucu
 </title>
 <!-- JQUERY -->
 <script type="text/javascript" src="assets/javascript/jquery.min.js"></script>
@@ -33,25 +33,12 @@ if ($search)
 	$searchQuery 	= stripslashes($_GET["search"]);
 	$isFilterable 	= false;
 }
-$user 		= 'root';
-$password 	= 'onur1896';
-$db 		= 'kariye';
-$host 		= 'localhost';
-$port 		= 3306;
-$con 		= mysqli_connect($host,$user,$password,$db,$port);
-			  mysqli_set_charset($con,"utf8");
 
-if (!isset($_SESSION['admin'])):
-    if ($subpage != 'login' && $subpage != 'detay'):
-        echo "<script>window.location.href=window.location.href=document.location.origin + document.location.pathname + '?page=common&subpage=login';</script>";
-    endif;
-endif;
 ?>
 <style>
 	.table > tbody > tr > td {
 	     vertical-align: middle;
 	}
-  body { padding-top: 80px; }
 </style>
 <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
 <!-- Modal -->
