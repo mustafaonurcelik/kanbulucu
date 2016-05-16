@@ -1,2 +1,0 @@
-# kanbulucu
-kan bulucu uygulama
