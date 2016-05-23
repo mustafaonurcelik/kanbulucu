@@ -26,9 +26,13 @@ var kan_ariyorum = {
 	ilan : {
 		save : function(){
 			var params = {
-				job : "ilankaydet",
+				job 	: "ilankaydet",
 				adsoyad : $('#adsoyad').val(),
-
+				il 		: $('#il').val(),
+				ilce 	: $('#ilce').val(),
+				kangrubu: $('#kangrubu').val(),
+				telefon : $('#telefon').val(),
+				eposta  : $('#eposta').val()
 			};
 
 			$.post('assets/server/server.php', params, function(resp){
