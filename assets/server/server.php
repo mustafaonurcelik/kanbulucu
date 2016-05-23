@@ -16,6 +16,7 @@ switch($job)
 		$adsoyad 	= stripcslashes($_POST["adsoyad"]);
 		$il 		= stripcslashes($_POST["il"]);
 		$ilce		= stripcslashes($_POST["ilce"]);
+        $tarih      = date("d-m-Y");
 
 
 		if ($db->exec("INSERT INTO ilanlar SET adsoyad='$adsoyad', il='$il'")):
