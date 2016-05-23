@@ -1,0 +1,52 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.10
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: May 23, 2016 at 03:10 PM
+-- Server version: 5.5.42
+-- PHP Version: 7.0.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `kanbulucu`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ilanlar`
+--
+
+DROP TABLE IF EXISTS `ilanlar`;
+CREATE TABLE `ilanlar` (
+  `id` int(11) NOT NULL,
+  `adsoyad` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  `sehir` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  `tarih` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  `kangrubu` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  `telefon` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  `eposta` varchar(255) COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `ilanlar`
+--
+ALTER TABLE `ilanlar`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `ilanlar`
+--
+ALTER TABLE `ilanlar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
