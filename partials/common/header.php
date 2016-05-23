@@ -1,14 +1,16 @@
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-	KanBulucu
+	KanBulucu.com | Acil kan hitiyacı olanlar ve donörler arasındaki köprü
 </title>
 <!-- JQUERY -->
 <script type="text/javascript" src="assets/javascript/jquery.min.js"></script>
 <!-- FONT : ROBOTO -->
-<link rel="stylesheet" href="assets/css/roboto.css">
+<!-- <link rel="stylesheet" href="assets/css/roboto.css"> -->
+<!-- FONT : SOURCE SANS -->
+<link rel="stylesheet" href="assets/css/source-sans-pro.css">
 <!-- BOOTSTRAP -->
-<link rel="stylesheet" href="assets/css/bootstrap.paper.css"/>
+<link rel="stylesheet" href="assets/css/bootstrap.lumen.css"/>
 <script src="assets/javascript/bootstrap.min.js"></script>
 <!-- FONT AWESOME -->
 <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -39,6 +41,11 @@ if ($search)
 	.table > tbody > tr > td {
 	     vertical-align: middle;
 	}
+    .pull-center
+    {
+        margin-left:auto !important;
+        margin-right:auto !important;
+    }
 </style>
 <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
 <!-- Modal -->

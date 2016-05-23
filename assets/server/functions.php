@@ -1,11 +1,18 @@
 <?php
 	
 // FUNCTIONS
-function idToName($con, $table, $id)
+function idToName($db, $table, $id)
 {
-	$query = mysqli_query($con, "SELECT ad FROM $table WHERE id='$id'");
-	$item = mysqli_fetch_object($query);
-	echo $item->ad;
+    return $db->query("SELECT name FROM $table WHERE id='$id'")->fetch()['name'];
 }
 // FUNCTIONS / end
+
+function kangruplari($db)
+{
+    foreach($db->query("SELECT * FROM kangruplari") as $grup):
+        echo "<option value='$grup[slug]'>$grup[name]</option>";
+    endforeach;
+}
+
+
 ?>
