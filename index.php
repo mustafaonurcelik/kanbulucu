@@ -15,7 +15,7 @@
 			{
 				echo $e->getMessage();
 			}
-			//$db->exec("SET NAMES utf-8");
+			$db->exec("SET NAMES 'UTF8'");
 
 			// if ($db->exec("INSERT INTO donorler SET adsoyad='Mustafa Onur Çelik', eposta='onurcelik@me.com'")):
 			// 	echo $db->lastInsertId() . "basarili";

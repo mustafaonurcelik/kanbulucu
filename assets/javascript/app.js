@@ -21,3 +21,27 @@ $.post('assets/server/server.php', params, function(resp){
 	}
 });
 */
+
+var kan_ariyorum = {
+	ilan : {
+		save : function(){
+			var params = {
+				job : "ilankaydet",
+				adsoyad : $('#adsoyad').val(),
+
+			};
+
+			$.post('assets/server/server.php', params, function(resp){
+				if (resp == 1)
+				{
+					//location.reload();
+				}
+				else
+				{
+					alert("HATA : ilan kaydı gerçekleştirilemedi!");
+				}
+			});
+
+		}
+	}
+}
