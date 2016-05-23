@@ -4,21 +4,28 @@
 	<div class="col-sm-6 text-center">
         <br><br><br><br><br>
         <div style="width:300px;" class="pull-center">
-            <form method="POST">
+            
+                
                 <strong>Kan Grubu :</strong>
                 <select name="kangrubu" id="" class="form-control">
                     <?php kangruplari($db); ?>
                 </select>
                 <br>
+
                 <strong>Şehir :</strong>
                 <select name="sehir" id="" class="form-control">
-                    <option value="14">Bolu</option>
-                    <option value="34">İstanbul</option>
+                    <?php iller($db); ?>
                 </select>
+
+                <strong>İlçe :</strong>
+                <select name="ilce" id="" class="form-control">
+                    <?php ilceler($db); ?>
+                </select>
+
                 <input type="hidden" name='tip' value='kanariyorum'>
                 <hr>
-                <button class="btn btn-danger btn-block">Kan Arıyorum</button>
-            </form>
+                <button class="btn btn-danger btn-block" onclick="kan_ariyorum.ilan.save()">Kan Arıyorum</button>
+            
         </div>
 	</div>
     <div class="col-sm-6 text-center">

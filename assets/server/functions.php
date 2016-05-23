@@ -15,4 +15,25 @@ function kangruplari($db)
 }
 
 
+function iller($db)
+{
+    foreach($db->query("SELECT * FROM iller") as $il):
+        echo "<option value='$il[id]'>$il[baslik]</option>";
+    endforeach;
+}
+
+
+function ilceler($db, $il_id = "")
+{
+	if ($il_id):
+		foreach($db->query("SELECT * FROM ilceler WHERE il_id='$il_id'") as $ilce):
+	        echo "<option value='$ilce[id]'>$ilce[baslik]</option>";
+	    endforeach;	
+	else:
+		foreach($db->query("SELECT * FROM ilceler") as $ilce):
+	        echo "<option value='$ilce[id]'>$ilce[baslik]</option>";
+	    endforeach;
+	endif;
+    
+}
 ?>
