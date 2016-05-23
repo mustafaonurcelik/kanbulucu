@@ -1,0 +1,107 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.10
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: May 23, 2016 at 02:56 PM
+-- Server version: 5.5.42
+-- PHP Version: 7.0.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `kanbulucu`
+--
+CREATE DATABASE IF NOT EXISTS `kanbulucu` DEFAULT CHARACTER SET utf8 COLLATE utf8_turkish_ci;
+USE `kanbulucu`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `donorler`
+--
+
+DROP TABLE IF EXISTS `donorler`;
+CREATE TABLE `donorler` (
+  `id` int(11) NOT NULL,
+  `adsoyad` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  `sehir` int(2) NOT NULL,
+  `telefon` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  `eposta` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  `kangrubu` int(2) NOT NULL,
+  `sifre` varchar(255) COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Dumping data for table `donorler`
+--
+
+INSERT INTO `donorler` (`id`, `adsoyad`, `sehir`, `telefon`, `eposta`, `kangrubu`, `sifre`) VALUES
+(1, 'Mustafa Onur Ã‡elik', 0, '', 'onurcelik@me.com', 0, ''),
+(2, 'Mustafa Onur Ã‡elik', 0, '', 'onurcelik@me.com', 0, ''),
+(3, 'Mustafa Onur Ã‡elik', 0, '', 'onurcelik@me.com', 0, ''),
+(4, 'Mustafa Onur Ã‡elik', 0, '', 'onurcelik@me.com', 0, ''),
+(5, 'Mustafa Onur Ã‡elik', 0, '', 'onurcelik@me.com', 0, ''),
+(6, 'Mustafa Onur Ã‡elik', 0, '', 'onurcelik@me.com', 0, ''),
+(7, 'Mustafa Onur Ã‡elik', 0, '', 'onurcelik@me.com', 0, ''),
+(8, 'Mustafa Onur Ã‡elik', 0, '', 'onurcelik@me.com', 0, ''),
+(9, 'Mustafa Onur Ã‡elik', 0, '', 'onurcelik@me.com', 0, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kangruplari`
+--
+
+DROP TABLE IF EXISTS `kangruplari`;
+CREATE TABLE `kangruplari` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+--
+-- Dumping data for table `kangruplari`
+--
+
+INSERT INTO `kangruplari` (`id`, `name`, `slug`) VALUES
+(1, 'A RH +', 'arhp'),
+(2, 'A RH -', 'arhn'),
+(3, 'B RH +', 'brhp'),
+(4, 'B RH -', 'brhn'),
+(5, 'AB RH +', 'abrhp'),
+(6, 'AB RH -', 'abrhn'),
+(7, '0 RH +', '0rhp'),
+(8, '0 RH -', '0rhn');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `donorler`
+--
+ALTER TABLE `donorler`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `kangruplari`
+--
+ALTER TABLE `kangruplari`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `donorler`
+--
+ALTER TABLE `donorler`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `kangruplari`
+--
+ALTER TABLE `kangruplari`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
