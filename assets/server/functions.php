@@ -34,6 +34,6 @@ function ilceler($db, $il_id = "")
 	        echo "<option value='$ilce[id]'>$ilce[baslik]</option>";
 	    endforeach;
 	endif;
-    
-}
+}	        
+
 ?>
