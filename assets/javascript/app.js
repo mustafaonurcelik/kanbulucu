@@ -45,7 +45,43 @@ var kan_ariyorum = {
 					alert("HATA : ilan kaydı gerçekleştirilemedi!");
 				}
 			});
-
 		}
 	}
 }
+function ileGoreIlceleriGetir(){
+		var params = 
+		{
+			job 	: "ileGoreIlceleriGetir",
+			il_id	: $('#iller').val()
+		}
+
+		$.post('assets/server/server.php', params, function(resp){
+			setSelectOptions(JSON.parse(resp), 'ilceler');
+		});
+
+}
+
+function setSelectOptions(data, inputId)
+{
+	var toplam = data.length;
+	$('#'+inputId+" option").remove();
+	for(var i =0; i<toplam; i++)
+	{
+		var html  = "<option value='"+data[i].id+"'>";
+			html += data[i].baslik;
+			html += "</option>";
+
+		$("#"+inputId).append(html);
+	}
+}
+
+// home page:   display ilce
+
+
+
+
+
+
+
+
+

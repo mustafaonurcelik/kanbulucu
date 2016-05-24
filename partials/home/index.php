@@ -13,13 +13,13 @@
                 <br>
 
                 <strong>Şehir :</strong>
-                <select name="sehir" id="" class="form-control">
+                <select name="sehir" id="iller" onchange="ileGoreIlceleriGetir()" class="form-control">
                     <?php iller($db); ?>
                 </select>
 
                 <strong>İlçe :</strong>
-                <select name="ilce" id="" class="form-control">
-                    <?php ilceler($db); ?>
+                <select name="ilce" id="ilceler" class="form-control">
+                    
                 </select>
 
                 <input type="hidden" name='tip' value='kanariyorum'>
