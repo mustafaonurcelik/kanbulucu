@@ -13,12 +13,16 @@ $db->exec("SET NAMES 'UTF8'");
 switch($job)
 {
 	case "ilankaydet":
-		$adsoyad 	= stripcslashes($_POST["adsoyad"]);
-		$il 		= stripcslashes($_POST["il"]);
-		$ilce		= stripcslashes($_POST["ilce"]);
-		$tarih      = $timestamp = date(‘d-m-Y’);
+		$adsoyad 		= stripcslashes($_POST["adsoyad"]);
+		$il 			= stripcslashes($_POST["il"]);
+		$ilce			= stripcslashes($_POST["ilce"]);
+		$tarih          = date("d-m-Y");
+		$kangrubu   	= stripcslashes($_POST["kangrubu"]);
+		$eposta			= stripcslashes($_POST["eposta"]);
+		$telefon		= stripcslashes($_POST["telefon"]);
+		$kullanicinotu	= stripcslashes($_POST["kullanicinotu"]);
 
-		if ($db->exec("INSERT INTO ilanlar SET adsoyad='$adsoyad', il='$il'")):
+		if ($db->exec("INSERT INTO ilanlar SET adsoyad='$adsoyad', il='$il', ilce='$ilce', tarih='$tarih', kangrubu='$kangrubu', telefon='$telefon',eposta='$eposta',kullanicinotu='$kullanicinotu'")):
 			echo 1;
 		else:
 			echo 0;
@@ -40,6 +44,6 @@ switch($job)
 		endforeach;
 
 		echo json_encode($ileGoreIlceler);
-
+		
 	break;
 } // switch ends here

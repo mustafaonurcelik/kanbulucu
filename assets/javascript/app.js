@@ -26,13 +26,14 @@ var kan_ariyorum = {
 	ilan : {
 		save : function(){
 			var params = {
-				job 	: "ilankaydet",
-				adsoyad : $('#adsoyad').val(),
-				il 		: $('#il').val(),
-				ilce 	: $('#ilce').val(),
-				kangrubu: $('#kangrubu').val(),
-				telefon : $('#telefon').val(),
-				eposta  : $('#eposta').val()
+				job 		  : "ilankaydet",
+				adsoyad 	  : $('#adsoyad').val(),
+				il 			  : $('#iller').val(),
+				ilce 		  : $('#ilceler').val(),
+				kangrubu	  : $('#kangrubu').val(),
+				telefon 	  : $('#telefon').val(),
+				eposta  	  : $('#eposta').val(),
+				kullanicinotu : $('#kullanicinotu').val()
 			};
 
 			$.post('assets/server/server.php', params, function(resp){
@@ -42,7 +43,7 @@ var kan_ariyorum = {
 				}
 				else
 				{
-					alert("HATA : ilan kaydı gerçekleştirilemedi!");
+					//alert("HATA : ilan kaydı gerçekleştirilemedi!");
 				}
 			});
 		}
