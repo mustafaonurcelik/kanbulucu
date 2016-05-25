@@ -36,19 +36,52 @@ var kan_ariyorum = {
 				kullanicinotu : $('#kullanicinotu').val()
 			};
 
-			$.post('assets/server/server.php', params, function(resp){
-				if (resp == 1)
-				{
-					//location.reload();
-				}
-				else
-				{
-					//alert("HATA : ilan kaydı gerçekleştirilemedi!");
-				}
-			});
+			var isFormOk = validateForm(params);
+			console.log("ok? : " + isFormOk);
+
+			if (isFormOk)
+			{
+				$.post('assets/server/server.php', params, function(resp){
+					if (resp == 1)
+					{
+						alert("ilan basariyla kaydedildi");
+					}
+					else
+					{
+						alert("HATA : ilan kaydı gerçekleştirilemedi!");
+					}
+				});
+			}
+			else
+			{
+				alert("Lütfen tüm alanları doldurunuz!");
+			}
 		}
 	}
 }
+
+
+function validateForm(params)
+{
+	var isFilled = true;
+	if (Object.keys(params).length > 0)
+	{
+		var lngt = Object.keys(params).length;
+	}
+	else
+	{
+		return false;
+	}
+
+	for (var i = 0; i < lngt; i++)
+	{
+		isFilled = (params[Object.keys(params)[i]] == "") ? false : true;
+	}
+
+	return (isFilled) ? true : false;
+}
+
+
 function ileGoreIlceleriGetir(){
 		var params = 
 		{
