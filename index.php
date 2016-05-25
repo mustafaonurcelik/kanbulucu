@@ -6,6 +6,13 @@
 		<?php include("assets/server/functions.php"); ?>
 	</head>
 	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<img src="assets/images/logo.svg" width="200" />
+				</div>
+			</div>
+		</div>
 		<?php
 			try
 			{
