@@ -21,7 +21,7 @@ $.post('assets/server/server.php', params, function(resp){
 	}
 });
 */
-
+	/////////// kan arama formu \\\\\\\\\\\\
 var kan_ariyorum = {
 	ilan : {
 		save : function(){
@@ -58,6 +58,53 @@ var kan_ariyorum = {
 		}
 	}
 }
+
+	/////////// kan bagislama formu \\\\\\\\\\\\
+var kan_bagisla = {
+	ilan : {
+		save : function(){
+			var params = {
+				job 		  : "bagiskaydet",
+				adsoyad 	  : $('#adsoyad').val(),
+				il 			  : $('#iller').val(),
+				ilce 		  : $('#ilceler').val(),
+				kangrubu	  : $('#kangrubu').val(),
+				telefon 	  : $('#telefon').val(),
+				eposta  	  : $('#eposta').val(),
+				sifre		  : $('#sifre').val()
+			};
+
+			var isFormOk = validateForm(params);
+
+			if (isFormOk)
+			{
+				$.post('assets/server/server.php', params, function(resp){
+					if (resp == 0)
+					{
+						alert("HATA : ilan kaydı gerçekleştirilemedi!");
+					}
+					else
+					{
+						window.location.href="?page=kan-bagisla&subpage=profil&profilid="+resp;
+					}
+				});
+			}
+			else
+			{
+				alert("Lütfen tüm alanları doldurunuz!");
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
 
 
 function validateForm(params)

@@ -45,16 +45,19 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12">
-        <strong>Not Bırak :</strong>
-         <br />
-         <textarea class="form-control" name="" id="kullanicinotu" placeholder="Örn : XXX Hastanesinde yatmakta olan yakınım için kan veren donörler ödüllendirilecektir." rows="6"></textarea>
+      <div class="col-sm-6">
+        <strong>Şifre :</strong>
+        <input type="password" name="sifre" id="sifre" class="form-control">
+      </div>
+      <div class="col-sm-6">
+        <strong>Tel Numaramı Göster :</strong>
+         <input type="checkbox" name="telefonugoster" value="goster" checked>
       </div>
     </div>
   </div>
 </div>
    <hr>
-   <button class="btn btn-danger btn-block" onclick="kan_ariyorum.ilan.save()">Kan Arıyorum</button>
+   <button class="btn btn-danger btn-block" onclick="kan_bagisla.ilan.save()">Kan Bağışla</button>
 
 
 
