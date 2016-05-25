@@ -29,7 +29,7 @@
   <!-- kullanici notu -->
    <strong>Not Bırak :</strong>
    <br />
-   <textarea class="form-control" name="" id="kullanicinotu"></textarea>
+   <textarea class="form-control" name="" id="kullanicinotu" placeholder="Örn : Yakınım için kan veren donörler ödüllendirilecektir."></textarea>
   <!-- submit -->	
    <hr>
    <button class="btn btn-danger btn-block" onclick="kan_ariyorum.ilan.save()">Kan Arıyorum</button>

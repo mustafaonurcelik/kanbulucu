@@ -34,6 +34,12 @@ function ilceler($db, $il_id = "")
 	        echo "<option value='$ilce[id]'>$ilce[baslik]</option>";
 	    endforeach;
 	endif;
-}	        
+}
+
+function slugToName($db, $slug)
+{
+    $q = $db->query("SELECT name FROM kangruplari WHERE slug='$slug'")->fetch();
+    echo $q[name];
+}
 
 ?>

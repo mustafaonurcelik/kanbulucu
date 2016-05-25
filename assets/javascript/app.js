@@ -37,18 +37,17 @@ var kan_ariyorum = {
 			};
 
 			var isFormOk = validateForm(params);
-			console.log("ok? : " + isFormOk);
 
 			if (isFormOk)
 			{
 				$.post('assets/server/server.php', params, function(resp){
-					if (resp == 1)
+					if (resp == 0)
 					{
-						$('#kanAraModal').modal('show');
+						alert("HATA : ilan kaydı gerçekleştirilemedi!");
 					}
 					else
 					{
-						alert("HATA : ilan kaydı gerçekleştirilemedi!");
+						window.location.href="?page=kan-ariyorum&subpage=ilan-detay&ilanid="+resp;
 					}
 				});
 			}
