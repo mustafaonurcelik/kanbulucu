@@ -23,7 +23,7 @@ switch($job)
 		$kullanicinotu	= stripcslashes($_POST["kullanicinotu"]);
 
 		if ($db->exec("INSERT INTO ilanlar SET adsoyad='$adsoyad', il='$il', ilce='$ilce', tarih='$tarih', kangrubu='$kangrubu', telefon='$telefon',eposta='$eposta',kullanicinotu='$kullanicinotu'")):
-			echo 1;
+			echo $db->lastInsertId();
 		else:
 			echo 0;
 		endif;
