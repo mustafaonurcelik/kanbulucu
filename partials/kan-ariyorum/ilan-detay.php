@@ -1,10 +1,6 @@
 <?php
-
     $ilanid = $_GET[ilanid];
-
     $ilan = $db->query("SELECT * FROM ilanlar WHERE id='$ilanid'")->fetch();
-
-
 ?>
 
 <br />
@@ -22,11 +18,11 @@
     </tr>
     <tr>
         <td>İl</td>
-        <td><?php echo $ilan[il]; ?></td>
+        <td><?php exchangeValues($db, 'iller', $ilan[il], 'baslik'); ?></td>
     </tr>
         <tr>
         <td>İlce</td>
-        <td><?php echo $ilan[ilce]; ?></td>
+        <td><?php exchangeValues($db, 'ilceler', $ilan[ilce], 'baslik'); ?></td>
     </tr>
         <tr>
         <td>Tarih</td>
@@ -49,7 +45,8 @@
     </tr>
 </table>
 <!-- ilana uygun ilanlar -->
-<h2>İLANA UYAN DONÖRLER</h2>
+<hr>
+<h2><strong><?php exchangeValues($db, 'iller', $ilan[il], 'baslik'); ?></strong> ilindeki <strong><?php slugToName($db, $ilan[kangrubu]); ?></strong> donörler</h2>
 <br />
 
 
