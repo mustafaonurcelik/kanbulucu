@@ -28,7 +28,7 @@
         <td>İlce</td>
         <td><?php echo $ilan[ilce]; ?></td>
     </tr>
-        <tr>
+        <tr> 
         <td>Tarih</td>
         <td><?php echo $ilan[tarih]; ?></td>
     </tr>
