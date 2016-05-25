@@ -22,7 +22,7 @@
     </tr>
     <tr>
         <td>İl</td>
-        <td><?php echo $ilan[il]; ?></td>
+        <td><?php echo $ilan[il]; ?></td> 
     </tr>
         <tr>
         <td>İlce</td>
