@@ -33,3 +33,28 @@
   <!-- submit -->	
    <hr>
    <button class="btn btn-danger btn-block" onclick="kan_ariyorum.ilan.save()">Kan Arıyorum</button>
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="kanAraModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Kan Bulucu</h4>
+        </div>
+        <div class="modal-body">
+          <p>İlanınız Başarıyla Alınmıştır</p>
+        </div>
+        <div class="modal-footer">
+<!--          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>    -->
+          <a href="?page=ilan-detay" class="btn btn-success">Tamam</a>
+        </div>
+      </div>
+      
+    </div>
+  </div>

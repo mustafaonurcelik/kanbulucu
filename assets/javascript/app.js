@@ -44,7 +44,7 @@ var kan_ariyorum = {
 				$.post('assets/server/server.php', params, function(resp){
 					if (resp == 1)
 					{
-						alert("ilan basariyla kaydedildi");
+						$('#kanAraModal').modal('show');
 					}
 					else
 					{
