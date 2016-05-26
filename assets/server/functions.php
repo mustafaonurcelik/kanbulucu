@@ -49,4 +49,5 @@ function exchangeValues($db, $tableName, $id, $alinacakKolon)
     echo $q[$alinacakKolon];
 }
 
+
 ?>
