@@ -2,8 +2,13 @@
 -- version 4.4.10
 -- http://www.phpmyadmin.net
 --
+<<<<<<< HEAD
 -- Host: localhost:8889
 -- Generation Time: May 25, 2016 at 07:24 PM
+=======
+-- Host: localhost
+-- Generation Time: May 25, 2016 at 06:16 PM
+>>>>>>> mustafaonurcelik/master
 -- Server version: 5.5.42
 -- PHP Version: 7.0.0
 
@@ -39,6 +44,7 @@ CREATE TABLE IF NOT EXISTS `donorler` (
 -- Dumping data for table `donorler`
 --
 
+<<<<<<< HEAD
 INSERT INTO `donorler` (`id`, `adsoyad`, `sehir`, `telefon`, `telefonumugoster`, `eposta`, `kangrubu`, `sifre`, `ilce`) VALUES
 (1, 'Mustafa Onur Ã‡elik', 0, '', 0, 'onurcelik@me.com', 0, '', ''),
 (2, 'Mustafa Onur Ã‡elik', 0, '', 0, 'onurcelik@me.com', 0, '', ''),
@@ -52,6 +58,18 @@ INSERT INTO `donorler` (`id`, `adsoyad`, `sehir`, `telefon`, `telefonumugoster`,
 (10, '123', 3, '123123', 1, '12312312', 0, '', '27'),
 (11, 'qweqw', 5, 'weqwe', 1, 'qweqwe', 0, '', '51'),
 (12, 'qweqwe', 4, 'qweqwe', 1, 'huseyinkucukdaleqwe', 0, '', '44');
+=======
+INSERT INTO `donorler` (`id`, `adsoyad`, `sehir`, `telefon`, `telefonumugoster`, `eposta`, `kangrubu`, `sifre`) VALUES
+(1, 'Mustafa Onur Ã‡elik', 0, '', 0, 'onurcelik@me.com', 0, ''),
+(2, 'Mustafa Onur Ã‡elik', 0, '', 0, 'onurcelik@me.com', 0, ''),
+(3, 'Mustafa Onur Ã‡elik', 0, '', 0, 'onurcelik@me.com', 0, ''),
+(4, 'Mustafa Onur Ã‡elik', 0, '', 0, 'onurcelik@me.com', 0, ''),
+(5, 'Mustafa Onur Ã‡elik', 0, '', 0, 'onurcelik@me.com', 0, ''),
+(6, 'Mustafa Onur Ã‡elik', 0, '', 0, 'onurcelik@me.com', 0, ''),
+(7, 'Mustafa Onur Ã‡elik', 0, '', 0, 'onurcelik@me.com', 0, ''),
+(8, 'Mustafa Onur Ã‡elik', 0, '', 0, 'onurcelik@me.com', 0, ''),
+(9, 'Mustafa Onur Ã‡elik', 0, '', 0, 'onurcelik@me.com', 0, '');
+>>>>>>> mustafaonurcelik/master
 
 -- --------------------------------------------------------
 
@@ -70,7 +88,11 @@ CREATE TABLE IF NOT EXISTS `ilanlar` (
   `telefon` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
   `eposta` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
   `kullanicinotu` longtext COLLATE utf8_turkish_ci NOT NULL
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+>>>>>>> mustafaonurcelik/master
 
 --
 -- Dumping data for table `ilanlar`
@@ -89,8 +111,12 @@ INSERT INTO `ilanlar` (`id`, `adsoyad`, `il`, `ilce`, `tarih`, `kangrubu`, `tele
 (43, 'onur celik', '65', '852', '25-05-2016', 'arhp', '214234s', 'sdfsdf', 'sdfsdfsdf'),
 (44, 'hede hodo', '3', '25', '25-05-2016', 'abrhp', '123123123', 'adasd@asdasd.asdasd', 'hefsaldknaskda asdkjasdka sdkas d\n'),
 (45, 'asdasdad', '4', '45', '25-05-2016', 'arhp', '1213123123', 'asdasd!@asdasd', 'asdasdasd'),
+<<<<<<< HEAD
 (46, 'Mustafa Onur Çelik', '14', '170', '25-05-2016', 'arhp', '05397048108', 'onurcelik@me.com', 'Çok acil lütfen yardım edin.'),
 (47, 'eqwe', '19', '232', '25-05-2016', 'brhp', 'wqewqe', 'qeweq', 'qeww');
+=======
+(46, 'Mustafa Onur Çelik', '14', '170', '25-05-2016', 'arhp', '05397048108', 'onurcelik@me.com', 'Çok acil lütfen yardım edin.');
+>>>>>>> mustafaonurcelik/master
 
 -- --------------------------------------------------------
 
@@ -1252,7 +1278,11 @@ ALTER TABLE `donorler`
 -- AUTO_INCREMENT for table `ilanlar`
 --
 ALTER TABLE `ilanlar`
+<<<<<<< HEAD
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=48;
+=======
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=47;
+>>>>>>> mustafaonurcelik/master
 --
 -- AUTO_INCREMENT for table `ilceler`
 --

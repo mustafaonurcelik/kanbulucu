@@ -38,8 +38,9 @@ switch($job)
 		$kangrubu   	= stripcslashes($_POST["kangrubu"]);
 		$eposta			= stripcslashes($_POST["eposta"]);
 		$telefon		= stripcslashes($_POST["telefon"]);
+		$sifre  		= stripcslashes($_POST["sifre"]);
 
-		if ($db->exec("INSERT INTO donorler SET adsoyad='$adsoyad', sehir='$il', ilce='$ilce', kangrubu='$kangrubu', telefon='$telefon',eposta='$eposta'")):
+		if ($db->exec("INSERT INTO donorler SET adsoyad='$adsoyad', sehir='$il', ilce='$ilce', kangrubu='$kangrubu', telefon='$telefon',eposta='$eposta',sifre='$sifre'")):
 			echo $db->lastInsertId();
 		else:
 			echo 0;

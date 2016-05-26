@@ -71,23 +71,26 @@ var kan_bagisla = {
 				kangrubu	  : $('#kangrubu').val(),
 				telefon 	  : $('#telefon').val(),
 				eposta  	  : $('#eposta').val(),
-				sifre		  : $('#sifre').val()
+				sifre		  : $('#sifre').val(),
+				sifreTekrar   : $('#sifreTekrar').val(),
 			};
-
+			
 			var isFormOk = validateForm(params);
 
 			if (isFormOk)
 			{
-				$.post('assets/server/server.php', params, function(resp){
-					if (resp == 0)
-					{
-						alert("HATA : ilan kaydı gerçekleştirilemedi!");
-					}
-					else
-					{
-						window.location.href="?page=kan-bagisla&subpage=profil&profilid="+resp;
-					}
-				});
+				if (params.sifre == params.sifreTekrar){	
+					$.post('assets/server/server.php', params, function(resp){
+						if (resp == 0)
+						{
+							alert("HATA : ilan kaydı gerçekleştirilemedi!");
+						}
+						else
+						{
+							window.location.href="?page=kan-bagisla&subpage=profil&profilid="+resp;
+						}
+					});
+				}
 			}
 			else
 			{
@@ -121,7 +124,10 @@ function validateForm(params)
 
 	for (var i = 0; i < lngt; i++)
 	{
-		isFilled = (params[Object.keys(params)[i]] == "") ? false : true;
+		if (params[Object.keys(params)[i]] == "" || params[Object.keys(params)[i]] == null)
+		{
+			return false;
+		}
 	}
 
 	return (isFilled) ? true : false;
