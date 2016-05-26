@@ -71,7 +71,7 @@ switch($job)
 // ilan detay sayfasi - ilana uyan donorler //
 //////////////////////////////////////////////
 
-foreach ($db->query("SELECT * FROM ilceler WHERE il_id='$il_id'")): 
+//foreach ($db->query("SELECT * FROM ilceler WHERE il_id='$il_id'")): 
 
 	
 

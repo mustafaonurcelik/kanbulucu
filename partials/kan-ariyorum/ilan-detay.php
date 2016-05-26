@@ -48,6 +48,15 @@
 <hr>
 <h2><strong><?php exchangeValues($db, 'iller', $ilan[il], 'baslik'); ?></strong> ilindeki <strong><?php slugToName($db, $ilan[kangrubu]); ?></strong> donörler</h2>
 <br />
+<?php
+    foreach($db->query("SELECT * FROM donorler WHERE ilce='$ilan[ilce]'") as $donor):
+        echo "$donor[adsoyad]";
+        if ($donor[telefonumugoster] == 1):
+            echo " - $donor[telefon]";
+        endif;
+        echo "<br/>";
+    endforeach;
+?>
 
 
 
