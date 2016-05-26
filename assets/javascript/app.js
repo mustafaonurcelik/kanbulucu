@@ -76,7 +76,7 @@ var kan_bagisla = {
 			};
 			
 			var isFormOk = validateForm(params);
-
+			// test
 			if (isFormOk)
 			{
 				if (params.sifre == params.sifreTekrar){	
