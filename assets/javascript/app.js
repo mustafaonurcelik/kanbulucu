@@ -129,7 +129,6 @@ function validateForm(params)
 	return (isFilled) ? true : false;
 }
 
-
 function ileGoreIlceleriGetir(){
 	var params = 
 	{
@@ -156,7 +155,11 @@ function setSelectOptions(data, inputId)
 	}
 }
 
-// home page:   display ilce
+function ilimdeki_donorler( il_id )
+{
+	$.post('assets/server/server.php', il_id, function(resp){
+	setSelectOptions(JSON.parse(resp), 'ilceler');
+}
 
 
 

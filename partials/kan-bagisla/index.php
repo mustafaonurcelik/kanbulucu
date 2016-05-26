@@ -44,7 +44,7 @@
     <div class="row">
       <div class="col-sm-12">
         <strong>Tel Numaramı Göster :</strong>
-        <input type="checkbox" name="" id="telefonugoster">
+        <input type="checkbox" name="" id="telefonugoster" checked>
         <br /><br />
       </div>
     </div>
