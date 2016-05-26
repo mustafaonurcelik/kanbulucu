@@ -24,7 +24,7 @@
         <td>İlce</td>
         <td><?php exchangeValues($db, 'ilceler', $ilan[ilce], 'baslik'); ?></td>
     </tr>
-        <tr>
+        <tr> 
         <td>Tarih</td>
         <td><?php echo $ilan[tarih]; ?></td>
     </tr>
