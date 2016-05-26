@@ -76,18 +76,19 @@ var kan_bagisla = {
 			};
 			
 			var isFormOk = validateForm(params);
-			// test
 			if (isFormOk)
 			{
-				if (params.sifre == params.sifreTekrar){	
+				if (params.sifre == params.sifreTekrar){
 					$.post('assets/server/server.php', params, function(resp){
 						if (resp == 0)
 						{
 							alert("HATA : ilan kaydı gerçekleştirilemedi!");
+
 						}
 						else
 						{
 							window.location.href="?page=kan-bagisla&subpage=profil&profilid="+resp;
+
 						}
 					});
 				}
@@ -99,16 +100,6 @@ var kan_bagisla = {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
 
 function validateForm(params)
 {

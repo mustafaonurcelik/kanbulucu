@@ -50,8 +50,14 @@
         <input type="password" name="sifre" id="sifre" class="form-control">
       </div>
       <div class="col-sm-6">
+        <strong>Şifre Tekrar:</strong>
+        <input type="password" name="sifre" id="sifreTekrar" class="form-control">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
         <strong>Tel Numaramı Göster :</strong>
-         <input type="checkbox" name="telefonugoster" value="goster" checked>
+        <input type="checkbox" name="telefonugoster" value="goster" checked>
       </div>
     </div>
   </div>
