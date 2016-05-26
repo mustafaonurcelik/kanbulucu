@@ -34,15 +34,20 @@
       <div class="col-sm-6">
         <strong>Telefon :</strong>
         <br />
-        <input type="text" name="" id="telefon" class="form-control">
-        <br>     
+        <input type="text" name="" id="telefon" class="form-control">  
       </div>
       <div class="col-sm-6">
          <strong>Email :</strong>
          <br />
-         <input type="text" name="" id="eposta" class="form-control">
-         <br>     
+         <input type="text" name="" id="eposta" class="form-control">    
       </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <strong>Tel Numaramı Göster :</strong>
+        <input type="checkbox" name="" id="telefonugoster">
+        <br /><br />
+      </div>
+    </div>
     </div>
     <div class="row">
       <div class="col-sm-6">
@@ -52,12 +57,6 @@
       <div class="col-sm-6">
         <strong>Şifre Tekrar:</strong>
         <input type="password" name="" id="sifreTekrar" class="form-control">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <strong>Tel Numaramı Göster :</strong>
-        <input type="checkbox" name="" id="telefonugoster" >
       </div>
     </div>
   </div>

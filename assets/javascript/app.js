@@ -49,6 +49,7 @@ var kan_ariyorum = {
 					else
 					{
 						window.location.href="?page=kan-ariyorum&subpage=ilan-detay&ilanid="+resp;
+
 					}
 				});
 			}
@@ -74,7 +75,7 @@ var kan_bagisla = {
 				eposta  	  : $('#eposta').val(),
 				sifre		  : $('#sifre').val(),
 				sifreTekrar   : $('#sifreTekrar').val(),
-				tgoster		  : (document.getElementById("telefonugoster").checked)?"goster":"gizle",
+				tgoster		  : (document.getElementById("telefonugoster").checked)?"1":"0",
 			};
 //			var x = document.getElementById("telefonugoster").checked;
 //			console.log(x);
@@ -121,8 +122,7 @@ function validateForm(params)
 	{
 		console.log(params[Object.keys(params)[i]]);
 		if (params[Object.keys(params)[i]] == "" || params[Object.keys(params)[i]] == null)
-		{
-			
+		{			
 			return false;
 		}
 	}
