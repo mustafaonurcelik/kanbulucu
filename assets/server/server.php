@@ -30,7 +30,7 @@ switch($job)
 		endif;
 
 	break;
-// bagisi database'e yazdir
+// bagisi database'e yazdir//
 	case "bagiskaydet":
 		$adsoyad 		= stripcslashes($_POST["adsoyad"]);
 		$il 			= stripcslashes($_POST["il"]);
