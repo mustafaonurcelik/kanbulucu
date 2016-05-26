@@ -27,13 +27,13 @@
                 <hr>
                 <button class="btn btn-danger btn-block" onclick="kan_ariyorum.ilan.save()">Kan Arıyorum</button>
 -->
-                <a href="?page=kan-ariyorum" class="btn btn-danger btn-block">Kan Arıyorum</a>
-            
+            <a href="?page=kan-ariyorum" class="btn btn-danger btn-block">Kan Arıyorum</a>          
         </div>
 	</div>
     <div class="col-sm-6 text-center">
         <br><br><br><br><br>
         <div style="width:300px;" class="pull-center">
+<!--  
             <form method="POST">
                 <strong>Kan Grubu :</strong>
                 <select name="kangrubu" id="" class="form-control">
@@ -52,6 +52,8 @@
                     Kan Vermek İstiyorum
                 </button>
             </form>
+-->           
+            <a href="?page=kan-bagisla" class="btn btn-danger btn-block">Kan Arıyorum</a>  
         </div>
     </div>
 </div>
