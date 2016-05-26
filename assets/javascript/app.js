@@ -34,6 +34,7 @@ var kan_ariyorum = {
 				telefon 	  : $('#telefon').val(),
 				eposta  	  : $('#eposta').val(),
 				kullanicinotu : $('#kullanicinotu').val()
+
 			};
 
 			var isFormOk = validateForm(params);
@@ -73,8 +74,10 @@ var kan_bagisla = {
 				eposta  	  : $('#eposta').val(),
 				sifre		  : $('#sifre').val(),
 				sifreTekrar   : $('#sifreTekrar').val(),
+				tgoster		  : (document.getElementById("telefonugoster").checked)?"goster":"gizle",
 			};
-			
+//			var x = document.getElementById("telefonugoster").checked;
+//			console.log(x);
 			var isFormOk = validateForm(params);
 			if (isFormOk)
 			{
@@ -83,14 +86,16 @@ var kan_bagisla = {
 						if (resp == 0)
 						{
 							alert("HATA : ilan kaydı gerçekleştirilemedi!");
-
 						}
 						else
 						{
 							window.location.href="?page=kan-bagisla&subpage=profil&profilid="+resp;
-
 						}
 					});
+				}
+				else
+				{
+					alert("sifre eslesmelidir");
 				}
 			}
 			else
@@ -112,30 +117,29 @@ function validateForm(params)
 	{
 		return false;
 	}
-
 	for (var i = 0; i < lngt; i++)
 	{
+		console.log(params[Object.keys(params)[i]]);
 		if (params[Object.keys(params)[i]] == "" || params[Object.keys(params)[i]] == null)
 		{
+			
 			return false;
 		}
 	}
-
 	return (isFilled) ? true : false;
 }
 
 
 function ileGoreIlceleriGetir(){
-		var params = 
-		{
-			job 	: "ileGoreIlceleriGetir",
-			il_id	: $('#iller').val()
-		}
+	var params = 
+	{
+		job 	: "ileGoreIlceleriGetir",
+		il_id	: $('#iller').val()
+	}
 
-		$.post('assets/server/server.php', params, function(resp){
-			setSelectOptions(JSON.parse(resp), 'ilceler');
-		});
-
+	$.post('assets/server/server.php', params, function(resp){
+		setSelectOptions(JSON.parse(resp), 'ilceler');
+	});
 }
 
 function setSelectOptions(data, inputId)
