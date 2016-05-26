@@ -53,7 +53,7 @@
                 </button>
             </form>
 -->           
-            <a href="?page=kan-bagisla" class="btn btn-danger btn-block">Kan Arıyorum</a>  
+            <a href="?page=kan-bagisla" class="btn btn-danger btn-block">Kan Bağışla</a>  
         </div>
     </div>
 </div>
