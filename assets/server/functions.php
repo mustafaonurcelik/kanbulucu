@@ -42,4 +42,11 @@ function slugToName($db, $slug)
     echo $q[name];
 }
 
+function exchangeValues($db, $tableName, $id, $alinacakKolon)
+{
+    // gelen deger mutlaka ID olmak zorunda..
+    $q = $db->query("SElECT $alinacakKolon FROM $tableName WHERE id='$id'")->fetch();
+    echo $q[$alinacakKolon];
+}
+
 ?>

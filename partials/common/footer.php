@@ -1,13 +1,6 @@
+<hr>
 <div class="row">
 	<div class="col-sm-12">
-		<script>
-			$(function(){
-				$('#navigasyon li.active').removeClass("active");
-				var activePage = "<?php echo $activePage; ?>";
-				if (activePage){
-					//$('#navigasyon li#'+activePage).addClass('active');	
-				}
-			});
-		</script>
+		<a href="?page=kan-ariyorum&subpage=ilan-detay&ilanid=44" class="btn btn-default">test</a>
 	</div>
 </div>

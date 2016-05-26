@@ -7,11 +7,15 @@
 	</head>
 	<body>
 		<div class="container">
+			<div class="row"><div class="col-sm-12">&nbsp;</div></div>
 			<div class="row">
 				<div class="col-sm-12">
-					<img src="assets/images/logo.svg" width="200" />
+					<a href="?page=home">
+						<img src="assets/images/logo.svg" width="200" />
+					</a>
 				</div>
 			</div>
+			<div class="row"><div class="col-sm-12">&nbsp;</div></div>
 		</div>
 		<?php
 			try

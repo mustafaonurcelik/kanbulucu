@@ -12,6 +12,7 @@ $db->exec("SET NAMES 'UTF8'");
 
 switch($job)
 {
+// ilani database'e yazdir
 	case "ilankaydet":
 		$adsoyad 		= stripcslashes($_POST["adsoyad"]);
 		$il 			= stripcslashes($_POST["il"]);
@@ -29,7 +30,24 @@ switch($job)
 		endif;
 
 	break;
+// bagisi database'e yazdir
+	case "bagiskaydet":
+		$adsoyad 		= stripcslashes($_POST["adsoyad"]);
+		$il 			= stripcslashes($_POST["il"]);
+		$ilce			= stripcslashes($_POST["ilce"]);
+		$kangrubu   	= stripcslashes($_POST["kangrubu"]);
+		$eposta			= stripcslashes($_POST["eposta"]);
+		$telefon		= stripcslashes($_POST["telefon"]);
+		$sifre  		= stripcslashes($_POST["sifre"]);
 
+		if ($db->exec("INSERT INTO donorler SET adsoyad='$adsoyad', sehir='$il', ilce='$ilce', kangrubu='$kangrubu', telefon='$telefon',eposta='$eposta',sifre='$sifre'")):
+			echo $db->lastInsertId();
+		else:
+			echo 0;
+		endif;
+
+	break;
+// illere gore ilceleri database'den al
 	case "ileGoreIlceleriGetir":
 		$il_id = $_POST['il_id'];
 		$ileGoreIlceler = array();
