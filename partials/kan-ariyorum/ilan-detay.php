@@ -67,12 +67,12 @@
     ilindeki tüm ilanlar 
 </button>
 
-
+<div class="row"><div class="col-sm-12">&nbsp;</div></div>
 
 <!-- illere gore donorler buraya basiliyor.. js basiyor.. -->
-<div class="container">
-    <div class="row" id="illereGoreDonorAlani">
-
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table table-bordered" id="illereGoreDonorAlani"></table>
     </div>
 </div>
 
