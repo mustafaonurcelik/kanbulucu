@@ -62,11 +62,19 @@
         echo "</div>";
     endforeach;
 ?>
-<button class="btn btn-primary btn-block" onclick="ilimdeki_donorler(<?php $ilan[ilce] ?>)">
+<button class="btn btn-primary btn-block" onclick="ilimdeki_donorler(3)">
     <strong> <?php exchangeValues($db, 'iller', $ilan[il], 'baslik');?> </strong> 
     ilindeki tüm ilanlar 
 </button>
 
+
+
+<!-- illere gore donorler buraya basiliyor.. js basiyor.. -->
+<div class="container">
+    <div class="row" id="illereGoreDonorAlani">
+
+    </div>
+</div>
 
 
 

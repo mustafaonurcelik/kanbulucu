@@ -154,14 +154,31 @@ function setSelectOptions(data, inputId)
 		$("#"+inputId).append(html);
 	}
 }
-
-function ilimdeki_donorler( il_id )
+/////////////////////////////////////////////////////////////
+// ilimdeki donorler ajax
+function ilimdeki_donorler( ilid )
 {
-	$.post('assets/server/server.php', il_id, function(resp){
-	setSelectOptions(JSON.parse(resp), 'ilceler');
+	var params = 
+	{
+		job 	: "uygunIleGoreDonorler",
+		il_id	: ilid
+	}
+
+	$.post('assets/server/server.php', params, function(resp){
+		uygunIlanlariBas(JSON.parse(resp),'ilce');
+	});
 }
-
-
+// ilimdeki donorleri ekrana bas
+function uygunIlanlariBas(resp)
+{
+//	for (var i = 0; i < resp.length; i++) {
+//		var keyler = Object.keys(resp[i]);
+//		console.log(Object.keys(resp[i]));
+//	}
+	var keys = Object.keys(resp[0]);
+	var eleman = elemandirec;
+	console.log(eleman);
+}
 
 
 
