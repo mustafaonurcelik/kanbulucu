@@ -171,6 +171,7 @@ function ilimdeki_donorler( ilid )
 // ilimdeki donorleri ekrana bas
 function uygunIlanlariBas(resp)
 {
+	$('#illereGoreDonorAlani tr').remove();
 	var keys = Object.keys(resp[0]);
 	for (var i = 0; i<resp.length; i++)
 	{	
@@ -185,18 +186,9 @@ function uygunIlanlariBas(resp)
 			}
 			else
 			{
-				if (resp[i].telefongoster == 0)
-				{
-					html += "<td>";
-					html += "<small>Numarası gizli</small>";
-					html += "</td>";
-				}
-				else
-				{
-					html += "<td>";
-					html += resp[i].telefon;
-					html += "</td>";		
-				}
+				html += "<td>";
+				html += (resp[i].telefongoster == 0) ? "<small>Numarası gizli</small>" : resp[i].telefon;
+				html += "</td>";
 			}
 		}
 		html += "</tr>";
