@@ -65,13 +65,31 @@ switch($job)
 		echo json_encode($ileGoreIlceler);
 		
 	break;
+// uygun ildeki donorleri databse'den al
+	case "uygunIleGoreDonorler":
+		$il_id = $_POST['il_id'];
+
+		$ilanaGoreDonorler = array();
+		foreach($db->query("SELECT * FROM donorler WHERE sehir='$il_id'") as $donor):
+			$ilcebilgileri = array(
+					adsoyad => $donor['adsoyad'],
+					ilce    => $donor['ilce'],
+					eposta  => $donor['eposta'],
+					telefon => $donor['telefon']
+				);
+
+			$ilanaGoreDonorler[]=$ilcebilgileri;
+		endforeach;
+//		print_r($ilanaGoreDonorler);
+		echo json_encode($ilanaGoreDonorler);
+		
+	break;
 } // switch ends here
 
-//////////////////////////////////////////////
-// ilan detay sayfasi - ilana uyan donorler //
-//////////////////////////////////////////////
 
-//foreach ($db->query("SELECT * FROM ilceler WHERE il_id='$il_id'")): 
+
+
+
 
 	
 
