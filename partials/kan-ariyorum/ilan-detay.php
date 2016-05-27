@@ -48,20 +48,21 @@
 <hr>
 <h2><strong><?php exchangeValues($db, 'ilceler', $ilan[ilce], 'baslik'); ?></strong> ilçesindeki <strong><?php slugToName($db, $ilan[kangrubu]); ?></strong> donörler</h2>
 <br />
-<?php
-    foreach($db->query("SELECT * FROM donorler WHERE ilce='$ilan[ilce]'") as $donor):
-        echo "<div style='background-color:yellow;border:solid 1px;' class='table table-bordered'>";
-        echo "<strong>Ad Soyad:</strong> $donor[adsoyad]";
-        echo "<br />";
-        if ($donor[telefonumugoster] == 1):
-            echo "<strong>Telefon:</strong> $donor[telefon]";
-            echo "<br />";
-        endif;
-        echo "<strong>Eposta:</strong> $donor[eposta]";
-        echo "<br />";
-        echo "</div>";
-    endforeach;
-?>
+<table class="table table-bordered">
+    <?php
+        foreach($db->query("SELECT * FROM donorler WHERE ilce='$ilan[ilce]'") as $donor):
+            echo "<tr>";
+            echo "<td> $donor[adsoyad] </td>";            
+            echo "<td>$donor[eposta]</td>";
+            if ($donor[telefonumugoster] == 1):      
+                echo "<td>$donor[telefon]</td>";
+            else:
+                echo "<td><small>Numarası Gizli<small></td>";  
+            endif;
+            echo "</tr>";
+        endforeach;
+    ?>
+</table>
 <button class="btn btn-primary btn-block" onclick="ilimdeki_donorler(3)">
     <strong> <?php exchangeValues($db, 'iller', $ilan[il], 'baslik');?> </strong> 
     ilindeki tüm ilanlar 
