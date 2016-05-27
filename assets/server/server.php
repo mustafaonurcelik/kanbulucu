@@ -75,7 +75,8 @@ switch($job)
 					adsoyad => $donor['adsoyad'],
 					ilce    => $donor['ilce'],
 					eposta  => $donor['eposta'],
-					telefon => $donor['telefon']
+					telefon => $donor['telefon'],
+					telefongoster => $donor['telefonumugoster'],
 				);
 
 			$ilanaGoreDonorler[]=$ilcebilgileri;

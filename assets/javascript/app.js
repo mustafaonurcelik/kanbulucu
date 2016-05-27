@@ -171,13 +171,37 @@ function ilimdeki_donorler( ilid )
 // ilimdeki donorleri ekrana bas
 function uygunIlanlariBas(resp)
 {
-//	for (var i = 0; i < resp.length; i++) {
-//		var keyler = Object.keys(resp[i]);
-//		console.log(Object.keys(resp[i]));
-//	}
 	var keys = Object.keys(resp[0]);
-	var eleman = elemandirec;
-	console.log(eleman);
+	for (var i = 0; i<resp.length; i++)
+	{	
+		var html = "<tr>";
+		for (var ix = 0; ix < keys.length; ix++)
+		{
+			if (keys[ix] != 'telefongoster')
+			{
+				html += "<td>";
+				html += resp[i][keys[ix]];
+				html += "</td>";
+			}
+			else
+			{
+				if (resp[i].telefongoster == 0)
+				{
+					html += "<td>";
+					html += "<small>Numarası gizli</small>";
+					html += "</td>";
+				}
+				else
+				{
+					html += "<td>";
+					html += resp[i].telefon;
+					html += "</td>";		
+				}
+			}
+		}
+		html += "</tr>";
+		$('#illereGoreDonorAlani').append(html);
+	}
 }
 
 
